@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.misaldotelcel.com/ws/nusoap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.misaldotelcel.com/ws/nusoap" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.misaldotelcel.com/ws/nusoap">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="BancosWsRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="BancosWsResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ObtenBancoRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ObtenBancoResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSaldoRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSaldoResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SaldoRecargasRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SaldoRecargasResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SaldoRecargasAndroidRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SaldoRecargasAndroidResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ReportarDepRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ReportarDepResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RegistroUsuariosRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RegistroUsuariosResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="BuenoRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="BuenoResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="VentasRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="VentasResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RUsuarioRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RUsuarioResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaRFCRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaRFCResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDepSRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaDepSResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ReportarDepAndroidRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ReportarDepAndroidResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="VentaWRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="VentaWResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSaldoWRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ObtenSaldoWResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="TraspasoWRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="TraspasoWResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CorteWRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="CorteWResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RecargaEWSRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RecargaEWSResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RecargaEWSandroidRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RecargaEWSandroidResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RecargaEWSmaquinaARequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RecargaEWSmaquinaAResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RecargaEWSjavaRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RecargaEWSjavaResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RecargaWRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RecargaWResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PaquetesRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="PaquetesResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="ApplicationServicesPortType">
+    <wsdl:operation name="BancosWs">
+      <wsdl:input message="tns:BancosWsRequest" />
+      <wsdl:output message="tns:BancosWsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenBanco">
+      <wsdl:input message="tns:ObtenBancoRequest" />
+      <wsdl:output message="tns:ObtenBancoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSaldo">
+      <wsdl:input message="tns:ObtenSaldoRequest" />
+      <wsdl:output message="tns:ObtenSaldoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SaldoRecargas">
+      <wsdl:input message="tns:SaldoRecargasRequest" />
+      <wsdl:output message="tns:SaldoRecargasResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SaldoRecargasAndroid">
+      <wsdl:input message="tns:SaldoRecargasAndroidRequest" />
+      <wsdl:output message="tns:SaldoRecargasAndroidResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportarDep">
+      <wsdl:input message="tns:ReportarDepRequest" />
+      <wsdl:output message="tns:ReportarDepResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistroUsuarios">
+      <wsdl:input message="tns:RegistroUsuariosRequest" />
+      <wsdl:output message="tns:RegistroUsuariosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaD">
+      <wsdl:input message="tns:ConsultaDRequest" />
+      <wsdl:output message="tns:ConsultaDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Bueno">
+      <wsdl:input message="tns:BuenoRequest" />
+      <wsdl:output message="tns:BuenoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Ventas">
+      <wsdl:input message="tns:VentasRequest" />
+      <wsdl:output message="tns:VentasResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RUsuario">
+      <wsdl:input message="tns:RUsuarioRequest" />
+      <wsdl:output message="tns:RUsuarioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaRFC">
+      <wsdl:input message="tns:ConsultaRFCRequest" />
+      <wsdl:output message="tns:ConsultaRFCResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDepS">
+      <wsdl:input message="tns:ConsultaDepSRequest" />
+      <wsdl:output message="tns:ConsultaDepSResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportarDepAndroid">
+      <wsdl:input message="tns:ReportarDepAndroidRequest" />
+      <wsdl:output message="tns:ReportarDepAndroidResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="VentaW">
+      <wsdl:input message="tns:VentaWRequest" />
+      <wsdl:output message="tns:VentaWResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSaldoW">
+      <wsdl:input message="tns:ObtenSaldoWRequest" />
+      <wsdl:output message="tns:ObtenSaldoWResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="TraspasoW">
+      <wsdl:input message="tns:TraspasoWRequest" />
+      <wsdl:output message="tns:TraspasoWResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CorteW">
+      <wsdl:input message="tns:CorteWRequest" />
+      <wsdl:output message="tns:CorteWResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RecargaEWS">
+      <wsdl:input message="tns:RecargaEWSRequest" />
+      <wsdl:output message="tns:RecargaEWSResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RecargaEWSandroid">
+      <wsdl:input message="tns:RecargaEWSandroidRequest" />
+      <wsdl:output message="tns:RecargaEWSandroidResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RecargaEWSmaquinaA">
+      <wsdl:input message="tns:RecargaEWSmaquinaARequest" />
+      <wsdl:output message="tns:RecargaEWSmaquinaAResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RecargaEWSjava">
+      <wsdl:input message="tns:RecargaEWSjavaRequest" />
+      <wsdl:output message="tns:RecargaEWSjavaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RecargaW">
+      <wsdl:input message="tns:RecargaWRequest" />
+      <wsdl:output message="tns:RecargaWResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Paquetes">
+      <wsdl:input message="tns:PaquetesRequest" />
+      <wsdl:output message="tns:PaquetesResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ApplicationServicesBinding" type="tns:ApplicationServicesPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="BancosWs">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/BancosWs" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenBanco">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/ObtenBanco" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSaldo">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/ObtenSaldo" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaldoRecargas">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/SaldoRecargas" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaldoRecargasAndroid">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/SaldoRecargasAndroid" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportarDep">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/ReportarDep" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistroUsuarios">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/RegistroUsuarios" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaD">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/ConsultaD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bueno">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/Bueno" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ventas">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/Ventas" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RUsuario">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/RUsuario" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaRFC">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/ConsultaRFC" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDepS">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/ConsultaDepS" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportarDepAndroid">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/ReportarDepAndroid" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VentaW">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/VentaW" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenSaldoW">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/ObtenSaldoW" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TraspasoW">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/TraspasoW" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CorteW">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/CorteW" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecargaEWS">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/RecargaEWS" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecargaEWSandroid">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/RecargaEWSandroid" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecargaEWSmaquinaA">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/RecargaEWSmaquinaA" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecargaEWSjava">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/RecargaEWSjava" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecargaW">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/RecargaW" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Paquetes">
+      <soap:operation soapAction="http://misaldotelcel.com/ws/index.php/Paquetes" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.misaldotelcel.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ApplicationServices">
+    <wsdl:port name="ApplicationServicesPort" binding="tns:ApplicationServicesBinding">
+      <soap:address location="http://misaldotelcel.com/ws/index.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

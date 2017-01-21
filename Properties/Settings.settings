@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MyPOS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="POSTiempoAireServicios_TiempoAire_ApplicationServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.ventatelcel.com:443/ws/index.php</Value>
+    </Setting>
+    <Setting Name="POSTiempoAireServicios_PagoServicios_ApplicationServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.recargamarcas.com/wsServicios/index.php</Value>
+    </Setting>
+    <Setting Name="POSTiempoAireServicios_com_misaldotelcel_ApplicationServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://misaldotelcel.com/ws/index.php</Value>
+    </Setting>
+    <Setting Name="Tiempo_Aire_Usuario" Type="System.String" Scope="User">
+      <Value Profile="(Default)">demo123456</Value>
+    </Setting>
+    <Setting Name="Tiempo_Aire_Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Demo123456</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

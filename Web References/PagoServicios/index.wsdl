@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.recargamarcas.com/ws/nusoap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.recargamarcas.com/ws/nusoap" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.recargamarcas.com/ws/nusoap">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SaldoServiciosRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="SaldoServiciosResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RecargaServiciosRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="RecargaServiciosResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="VentasServiciosRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="VentasServiciosResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ProductosRequest">
+    <wsdl:part name="cadena" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ProductosResponse">
+    <wsdl:part name="return1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="ApplicationServicesPortType">
+    <wsdl:operation name="SaldoServicios">
+      <wsdl:input message="tns:SaldoServiciosRequest" />
+      <wsdl:output message="tns:SaldoServiciosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RecargaServicios">
+      <wsdl:input message="tns:RecargaServiciosRequest" />
+      <wsdl:output message="tns:RecargaServiciosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="VentasServicios">
+      <wsdl:input message="tns:VentasServiciosRequest" />
+      <wsdl:output message="tns:VentasServiciosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Productos">
+      <wsdl:input message="tns:ProductosRequest" />
+      <wsdl:output message="tns:ProductosResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ApplicationServicesBinding" type="tns:ApplicationServicesPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="SaldoServicios">
+      <soap:operation soapAction="http://www.recargamarcas.com/wsServicios/index.php/SaldoServicios" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.recargamarcas.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.recargamarcas.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecargaServicios">
+      <soap:operation soapAction="http://www.recargamarcas.com/wsServicios/index.php/RecargaServicios" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.recargamarcas.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.recargamarcas.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VentasServicios">
+      <soap:operation soapAction="http://www.recargamarcas.com/wsServicios/index.php/VentasServicios" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.recargamarcas.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.recargamarcas.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Productos">
+      <soap:operation soapAction="http://www.recargamarcas.com/wsServicios/index.php/Productos" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://www.recargamarcas.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://www.recargamarcas.com/ws/nusoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ApplicationServices">
+    <wsdl:port name="ApplicationServicesPort" binding="tns:ApplicationServicesBinding">
+      <soap:address location="http://www.recargamarcas.com/wsServicios/index.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
